@@ -1,0 +1,5 @@
+.message::before {
+    background: #fff;
+    content: "Hello, CSS";
+    display: block;
+}

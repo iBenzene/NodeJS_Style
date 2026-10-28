@@ -1,0 +1,7 @@
+$message: "Hello, SCSS";
+
+.message::before {
+    background: #fff;
+    content: $message;
+    display: block;
+}

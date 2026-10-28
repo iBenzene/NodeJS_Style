@@ -1,0 +1,50 @@
+{
+    "name": "nodejs-style",
+    "version": "0.1.0",
+    "private": true,
+    "description": "个人 Node.js 项目代码风格规范。",
+    "type": "commonjs",
+    "engines": {
+        "node": ">=24.0.0"
+    },
+    "scripts": {
+        "start": "node examples/scripts/index.js",
+        "lint": "eslint --config eslint.config.js . && stylelint \"**/*.{css,scss,less}\"",
+        "lint:fix": "eslint --config eslint.config.js . --fix && stylelint \"**/*.{css,scss,less}\" --fix",
+        "format": "prettier . --write",
+        "format:check": "prettier . --check",
+        "typecheck": "tsc --project tsconfig.json",
+        "test": "node --test",
+        "check": "npm run lint && prettier . \"!**/*.{js,mjs,cjs,ts,jsx,tsx,vue,json,jsonc,css,scss,less}\" --check && npm run typecheck && npm test",
+        "fix": "npm run lint:fix && prettier . \"!**/*.{js,mjs,cjs,ts,jsx,tsx,vue,json,jsonc,css,scss,less}\" --write",
+        "prepare": "husky",
+        "precommit": "lint-staged --concurrent false"
+    },
+    "devDependencies": {
+        "@eslint/js": "^10.0.1",
+        "@prettier/plugin-pug": "^3.6.0",
+        "@types/react": "^19.3.0",
+        "@typescript-eslint/eslint-plugin": "^8.72.1",
+        "@typescript-eslint/parser": "^8.72.1",
+        "eslint": "^10.13.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-jsonc": "^3.4.2",
+        "eslint-plugin-perfectionist": "^5.13.0",
+        "eslint-plugin-prettier": "^5.5.7",
+        "eslint-plugin-vue": "^10.12.0",
+        "globals": "^17.13.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^17.6.0",
+        "postcss-less": "^6.0.0",
+        "postcss-scss": "^4.0.9",
+        "prettier": "^3.9.10",
+        "stylelint": "^17.16.0",
+        "stylelint-config-standard": "^40.0.0",
+        "stylelint-config-standard-less": "^4.1.0",
+        "stylelint-config-standard-scss": "^17.0.0",
+        "stylelint-order": "^8.1.2",
+        "stylelint-prettier": "^5.0.3",
+        "typescript": "~6.0.3",
+        "vue-eslint-parser": "^10.4.1"
+    }
+}

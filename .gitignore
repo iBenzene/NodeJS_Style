@@ -1,0 +1,16 @@
+# Dependencies and lockfiles
+node_modules/
+package-lock.json
+
+# Build output and test coverage
+dist/
+coverage/
+
+# Generated Husky files
+.husky/_/
+
+# Local environment configuration
+.env.local
+
+# System files
+.DS_Store

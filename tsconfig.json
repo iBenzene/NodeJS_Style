@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "jsx": "preserve",
+        "module": "nodenext",
+        "noEmit": true,
+        "strict": true,
+        "types": ["react"]
+    },
+    "include": ["examples/**/*.ts", "examples/**/*.tsx"]
+}

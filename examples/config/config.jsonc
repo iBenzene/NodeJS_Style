@@ -1,0 +1,6 @@
+{
+    // Object keys are sorted alphabetically
+    "age": 18,
+    "gender": "female",
+    "name": "Alice"
+}
